@@ -1,24 +1,15 @@
 import createMDX from '@next/mdx';
 
+const repoName = 'Typescript-Portfolio-site';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  basePath: `/${repoName}`,
+  images: { unoptimized: true },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  turbopack: {
-     rules: {
-      '*.svg': {
-        loaders: [
-          {
-            loader: '@svgr/webpack',
-            options: {
-              icon: true,
-            },
-          },
-        ],
-        as: '*.js',
-      },
-    },
-  },
+  turbopack: {},
 };
 
 const withMDX = createMDX({
