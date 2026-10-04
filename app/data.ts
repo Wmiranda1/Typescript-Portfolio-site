@@ -7,6 +7,8 @@ type Project = {
   id: string
 }
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 type WorkExperience = {
   company: string
   title: string
@@ -34,7 +36,7 @@ export const PROJECTS: Project[] = [
     description:
       'Aquent is the top marketing, design, and creative staffing agency, and a pioneer in cutting-edge recruitment technology.',
     link: 'https://aquent.com',
-    image: '/aquent.jpg',
+    image: `${BASE_PATH}/aquent.jpg`,
     id: 'project1',
   },
   {
@@ -42,7 +44,7 @@ export const PROJECTS: Project[] = [
     description:
       'Skill is a next-generation talent acquisition company, combining purpose-built AI recruiting, staffing and recruiting experience, and human expertise.',
     link: 'https://skill.com/',
-    image: '/skill.png',
+    image: `${BASE_PATH}/skill.png`,
     id: 'project2',
   },
   {
@@ -50,7 +52,7 @@ export const PROJECTS: Project[] = [
     description:
       'The global co-creation agency built on a new model of engagement. We help brands create breakthrough experiences with expertise from strategy to activation.',
     link: 'https://aquentstudios.com/',
-    image: '/aquent-studios.webp',
+    image: `${BASE_PATH}/aquent-studios.webp`,
     id: 'project3',
   },
   {
@@ -58,7 +60,7 @@ export const PROJECTS: Project[] = [
     description:
       'The all-in-one smart vendor management system that streamlines all your recruiting firms. See why leading HR and Talent Acquisition teams love Aquent Scout.',
     link: 'https://aquentscout.com/',
-    image: '/aquent-scout.png',
+    image: `${BASE_PATH}/aquent-scout.png`,
     id: 'project4',
   },
 ]
